@@ -5,9 +5,9 @@ Bem-vindo ao repositório do curso de Análises de Microbioma realizado entre 17
 
 Responsáveis: Erick M. Barros e Pedro C. Junger
 
-#Análise de Comunidades
+# Análise de Comunidades
 
-##Conteúdo:
+## Conteúdo:
 
 - Análises Exploratórias
 - Visualização de dados
@@ -20,7 +20,7 @@ Responsáveis: Erick M. Barros e Pedro C. Junger
 - Diversidade Filogenética
 - Processos Ecológicos - método de J. Stegen (bNTI e RC-BRay)
 
-##Pacotes do R
+## Pacotes do R
 
 Todos os pacotes do R necessários para acompanhar o curso estão disponíveis no seguinte link:
 
