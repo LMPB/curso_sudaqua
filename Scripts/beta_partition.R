@@ -8,12 +8,6 @@ library(cowplot)
 library(gridExtra)
 library(ggpubr)
 
-
-library(spaa)
-library(reshape2)
-library(adespatial)
-library(spdep)
-
 setwd("C:/Users/erick/Desktop/")
 
 
@@ -90,5 +84,5 @@ x = arrangeGrob(panel.a,panel.b,
                 layout_matrix = rbind(c(1,2), c(1,2)))
 as_ggplot(x)+
   draw_plot_label(label = c ("A","B"), size = 15,
-                  x = c(0, 0.5), y = c(0.9,0.9))
+                  x = c(0.4, 0.9), y = c(0.95,0.95))
 
