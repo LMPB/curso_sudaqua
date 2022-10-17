@@ -1,4 +1,4 @@
-#Beta-diversity Partitioning
+#Variation Partitioning
 
 library(dplyr)
 library(tidyr)
