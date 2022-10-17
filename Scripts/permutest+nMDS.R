@@ -25,9 +25,8 @@ anova(beta_dist_site)
 #plot(TukeyHSD(beta_dist_site), las = 1)
 
 #extract axis' importance
-valor = beta_dist_site$eig
-valor2 = (beta_dist_site$eig/sum(beta_dist_site$eig))*100
-head(valor2)
+valor = (beta_dist_site$eig/sum(beta_dist_site$eig))*100
+head(valor)
 
 #AQUI
 #extract axis' values
@@ -35,7 +34,7 @@ PCoA_score = scores(beta_dist_site$vectors[,1:2])
 map_dist = merge(map, PCoA_score, by.x="row.names", by.y="row.names")
 
 panel.a =
-ggplot(map_dist2, aes(PCoA1, PCoA2, color = season)) + 
+ggplot(map_dist, aes(PCoA1, PCoA2, color = season)) + 
   geom_jitter(size=1.5) +  
   #scale_shape_manual(values=c(1,2,14,15,3,4,16,17,10)) + 
   scale_color_manual(name="Season", 
@@ -48,7 +47,7 @@ ggplot(map_dist2, aes(PCoA1, PCoA2, color = season)) +
   ylab("PCoA 2 (17.18%)")
 
 panel.b = 
-ggplot(map_dist2, aes(PCoA1, PCoA2, color = trophic_state)) + 
+ggplot(map_dist, aes(PCoA1, PCoA2, color = trophic_state)) + 
   geom_jitter(size=1.5) +  
   #scale_shape_manual(values=c(1,2,14,15,3,4,16,17,10)) + 
   scale_color_manual(name="Trophic State", 
