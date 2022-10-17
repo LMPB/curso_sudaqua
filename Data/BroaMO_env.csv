@@ -1,9 +1,9 @@
 id,date,temp_air,temp_water,secchi,euphotic_zone,ph,doc,tn,chla,tsi,weather,season,trophic_state,ph_scale
-BroaMO_02,24/04/2018,20.7,23.69,2,1.18,5.94,7.823,0.292,2.771,51.54,sunny,dry,Oligotrophic,acid
-BroaMO_03,15/05/2018,21.4,23.17,2.03,1.17,6.29,5.204,0.325,1.633,49.63,partly_sunny,dry,Oligotrophic,acid
-BroaMO_04,15/06/2018,18.15,20.56,1.8,1.28,7.45,3.188,0.362,1.089,48.16,sunny,dry,Oligotrophic,Neutral
-BroaMO_05,19/07/2018,19.05,18.97,2.3,1.06,6.33,2.722,0.454,1.089,48.16,sunny,dry,Oligotrophic,acid
-BroaMO_06,21/08/2018,24,20,2.3,1.06,5.92,37.63,0.356,2.177,50.67,sunny,dry,Oligotrophic,acid
+BroaMO_02,24/04/2018,20.7,23.69,2,1.18,5.94,7.823,0.292,2.771,51.54,sunny,dry,Ultraoligotrophic,acid
+BroaMO_03,15/05/2018,21.4,23.17,2.03,1.17,6.29,5.204,0.325,1.633,49.63,partly_sunny,dry,Ultraoligotrophic,acid
+BroaMO_04,15/06/2018,18.15,20.56,1.8,1.28,7.45,3.188,0.362,1.089,48.16,sunny,dry,Ultraoligotrophic,Neutral
+BroaMO_05,19/07/2018,19.05,18.97,2.3,1.06,6.33,2.722,0.454,1.089,48.16,sunny,dry,Ultraoligotrophic,acid
+BroaMO_06,21/08/2018,24,20,2.3,1.06,5.92,37.63,0.356,2.177,50.67,sunny,dry,Ultraoligotrophic,acid
 BroaMO_07,19/09/2018,20.73,22.37,2.35,1.04,6.03,2.824,0.472,7.439,55.12,after_rain,dry,Mesotrophic,acid
 BroaMO_08,30/10/2018,23.2,25.6,1.12,1.83,6.38,4.474,0.365,8.491,55.6,sunny,rainy,Mesotrophic,acid
 BroaMO_09,22/11/2018,20.8,23.99,2.35,1.04,5.48,7.515,0.203,3.919,52.8,partly_sunny,rainy,Oligotrophic,acid
