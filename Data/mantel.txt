@@ -1,0 +1,4 @@
+variable	bact
+temp_water	0.2666
+secchi	0.4467
+chla	0.3795
