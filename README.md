@@ -22,7 +22,7 @@ Responsáveis: Erick M. Barros e Pedro C. Junger
 
 ## Pacotes do R
 
-Todos os pacotes do R necessários para acompanhar o curso estão disponíveis no seguinte link:
+A lista contendo todos os pacotes do R necessários para acompanhar o curso está disponível no seguinte link:
 
 https://docs.google.com/document/d/1HWYSNxN2ty32X0zNGENwmkLHUR28O8iG5ZSdHlNXZIQ/edit
 
