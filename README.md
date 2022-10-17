@@ -5,7 +5,7 @@ Bem-vindo ao repositório do curso de Análises de Microbioma realizado entre 17
 
 Responsáveis: Erick M. Barros e Pedro C. Junger
 
-# Análise de Comunidades
+# Análise de Comunidades Microbianas
 
 ## Conteúdo:
 
