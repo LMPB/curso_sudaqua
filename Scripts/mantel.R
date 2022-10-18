@@ -1,11 +1,15 @@
-#Mantel test
+#Mantel test script
+
+#loading required libraries
 library(vegan)
 library(dplyr)
 library(tidyr)
 library(ggplot2)
 
+#set directory in your machine
 setwd("C:/Users/erick/Desktop/")
 
+#data input
 asv_bact=read.csv("BroaMO_16S_ra_rarefied+taxonomy.csv",header=T,row.names="asv")
 asv_bact=asv_bact[1:12]
 asv_bact=t(asv_bact)
@@ -15,11 +19,11 @@ denv=decostand(env[2:10], na.rm=T, method="standardize")
 denv[,5]<-env[,6]
 
 rdasenv <- rda(asv_bact ~ temp_air+temp_water+secchi+ph+doc+tn+chla,data=denv)
-vif.cca(rdasenv)#colinearidade: recomendável tirar valores maiores que 10 das análises
+vif.cca(rdasenv)#colinearidade: recomendÃ¡vel tirar valores maiores que 10 das anÃ¡lises
 
 #Parsimonious subsets of explanatory variables (based on #forward selection)
 names(denv)
-denv <- denv[, c(1,2,3,5,6,7,8)]#seleciona as amostras que passaram pela análise de parsimônia e colinearidade
+denv <- denv[, c(1,2,3,5,6,7,8)]#seleciona as amostras que passaram pela anÃ¡lise de parsimÃ´nia e colinearidade
 names(denv)
 
 
@@ -28,12 +32,12 @@ bac.dist <- vegdist(asv_bact, "bray") #para diversidade melhor usar Bray
 
 #Environmental Distance matrices
 #Mantel test: Abundance vs Environment 
-env.dist <- vegdist(denv[,7], "euclidean") #aqui eu escolho uma variável ambiental da minha tabela para fazer a matriz de dissimilaridade
+env.dist <- vegdist(denv[,7], "euclidean") #aqui eu escolho uma variÃ¡vel ambiental da minha tabela para fazer a matriz de dissimilaridade
 mantel(bac.dist, env.dist, method="spear") #mantel abundancias vs altitude
 
 
-#Make the graph
-mantel=read.table(file = "mantel.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
+#Plot graph
+mantel=read.table(file = "mantel.txt", header=TRUE, sep="\t", dec=".", na.strings="NA") #input mantel results for plotting
 
 mantel %>% 
   gather(key = "type", value = "valor", -variable) %>% 
