@@ -1,14 +1,16 @@
 #diversity indexes
 
+#loading required libraries
 library(BiodiversityR)
 library(ggplot2)
 library(dplyr)
 library(tidyr)
 
+#set your directory
 setwd("C:/Users/erick/Desktop/")
 
+#data input
 asv_bact=read.csv("BroaMO_16S_ra_rarefied+taxonomy.csv",header=T,row.names="asv")
-
 
 #Diversity Indexes
 x=asv_bact[1:12]
