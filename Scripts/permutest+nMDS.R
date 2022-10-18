@@ -1,4 +1,6 @@
 #Betadispersion + nMDS
+
+#loading required libraries
 library(vegan)
 library(dplyr)
 library(tidyr)
@@ -6,9 +8,10 @@ library(cowplot)
 library(gridExtra)
 library(ggpubr)
 
-
+#setting directory in your machine
 setwd("C:/Users/erick/Desktop/")
 
+#data input
 asv_bact=read.csv("BroaMO_16S_ra_rarefied+taxonomy.csv",header=T,row.names="asv")
 asv_bact=asv_bact[1:12]
 asv_bact=t(asv_bact)
