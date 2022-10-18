@@ -1,8 +1,12 @@
-#Rarefaction
+#Rarefaction script
+
+#setting directory in your machine
 setwd ("C:/Users/erick/Desktop/")
+
+#loading required library
+
 library (vegan)
-
-
+#data input
 asv_bact=read.csv("BroaMO_16S.csv",header=T,row.names="asv")
 tax <- asv_bact[,13:19]
 asv_bact <- asv_bact[,1:12]
