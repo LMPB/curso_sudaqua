@@ -39,14 +39,13 @@ nn=gather(as.data.frame(result),key = "index", value = "value",-site, -weather, 
   transform(index=factor(index,levels=c("richness","Shannon","Jevenness","Simpson","Eevenness")))
 
 nn %>% 
-  ggplot(aes(x=index,y=value))+
+  ggplot(aes(x=season,y=value))+
   geom_boxplot(outlier.shape = NA)+
   geom_jitter(width = 0.5, aes(color = season))+
   #facet_grid(~index, scales = "free")+
-  facet_wrap(~index, ncol = 5, scales = "free")+
+  facet_wrap(~index, ncol = 5, scales = "free",strip.position="left")+
   theme_bw()+
   #theme(axis.text.x = element_text(angle = 45, hjust = 1))+
-  theme(axis.title.x=element_blank())+
-  theme(axis.text.x =element_blank())+
-  theme(axis.ticks.x =element_blank())+
-  theme(axis.title.y = element_blank())
+  theme(axis.title.x=element_blank(),
+        axis.title.y = element_blank(),strip.background = element_rect(fill ='white',colour = NA),
+        strip.placement = 'outside',strip.text = element_text(size=15))
