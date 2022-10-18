@@ -1,4 +1,4 @@
-##Generalized Linear Models
+##Linear Models and Generalized Linear Models
 
 ###### 1.1 - loading required libraries #####
 {
