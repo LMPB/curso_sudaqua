@@ -1,3 +1,6 @@
+#Bimodality
+
+#Loading required libraries
 library(dplyr)
 library(tidyr)
 library(ggplot2)
@@ -6,14 +9,17 @@ library(cowplot)
 library(gridExtra)
 library(ggpubr)
 
+#set directory in your machine
 setwd("C:/Users/erick/Desktop/")
 
+#data input
 asv_bact=read.csv("BroaMO_16S_ra_rarefied+taxonomy.csv",header=T,row.names="asv")
 asv_bact=asv_bact[1:12]
 asv_bact=t(asv_bact)
 asv_bact_pa = decostand(asv_bact, "pa")
 x=asv_bact_pa
 
+#plotting
 a = print(ggplot(data=data.frame(apply(x, 1, sum)[which(apply(x, 2, sum) >0)]),aes(x=data.frame(apply(x, 2, sum)[which(apply(x, 2, sum) >0)])[,1]))+
             geom_histogram(fill="grey80",colour="black",binwidth=1)+
             ylim(c(0,ncol(x)))+
