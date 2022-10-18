@@ -11,6 +11,7 @@ setwd("C:/Users/erick/Desktop/")
 
 #data input
 asv_bact=read.csv("BroaMO_16S_ra_rarefied+taxonomy.csv",header=T,row.names="asv")
+env= read.csv("Data/BroaMO_env.csv", header=T, row.names = 'id')
 
 #Diversity Indexes
 x=asv_bact[1:12]
