@@ -25,7 +25,7 @@ result[,1]=row.names(x1)
 result[,2:6]=cbind(x1,x2,x3,x4,x5)
 colnames(result)=c("site","richness","Shannon","Jevenness","Simpson","Eevenness")
 
-write.table(result, "18s_diversity_results.txt")
+write.table(result, "16s_diversity_results.txt")
 result[,7]<-env$weather
 colnames(result)[7]<- "weather"
 result[,8]<-env$season
