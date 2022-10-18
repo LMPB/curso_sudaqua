@@ -1,12 +1,16 @@
 #abundance variation per time
+
+#loading required libraries
 library(dplyr)
 library(tidyr)
 library(ggplot2)
 setwd("C:/Users/erick/Desktop/")
 
+#data input
 asv_bact=read.csv("BroaMO_16S_ra_rarefied+taxonomy.csv",header=T,row.names="asv")
 env=read.csv("BroaMO_env.csv")
 
+#creating groups
 groups = aggregate(asv_bact[1:12],by=list(category=asv_bact$Phylum), FUN = sum)
 row.names(groups)=groups$category
 groups=groups[,-1]
@@ -16,6 +20,7 @@ groups=as.data.frame(groups)
 groups[,25]<-env$date
 colnames(groups)[25]<- "date"
 
+#transforming format
 nn=gather(as.data.frame(groups),key = "group", value = "value",-date) %>% 
   transform(group=factor(group,levels=c(
   "Abditibacteriota", "Acidobacteriota", "Actinobacteriota", "Armatimonadota", "Bacteroidota", "Bdellovibrionota",
@@ -24,7 +29,7 @@ nn=gather(as.data.frame(groups),key = "group", value = "value",-date) %>%
 "Planctomycetota", "Proteobacteria", "SAR324 clade(Marine group B)", "Spirochaetota", "Verrucomicrobiota"))) %>% 
   mutate(date = as.Date(date))
 
-
+#Plotting main taxonomic groups over time
 ggplot(nn,aes(x=date,y=value,fill=group))+
   geom_area()+
   scale_fill_manual(name="", values = c("green","blueviolet","firebrick","gainsboro","goldenrod",
