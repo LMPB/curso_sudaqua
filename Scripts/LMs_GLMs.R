@@ -33,7 +33,7 @@ data_2$value<-as.numeric(data_2$value) # transform all values as numeric
 #### 2.3 - Observing data distribution ####
 data_2 %>% ggplot(aes(value))+
   facet_wrap(.~variable,scale="free")+
-  geom_density(aes(fill="blue"))+
+  geom_density(fill="blue",alpha=0.5)+
   theme_bw()+theme(legend.position='none')
 
 #### 3.1.1 - Running Linear Models
@@ -61,5 +61,18 @@ mult_model<-  lm (Shannon ~ temp_water*season, data=data)
 summary(mult_model)#N.S
 mult_model<-  lm (Shannon ~ temp_water*weather, data=data) 
 summary(mult_model)#N.S
+
+#### 3.2 - Regression plots ####
+data %>% ggplot(aes(temp_water,richness))+ geom_jitter()+
+  geom_smooth(method='lm')+
+  theme_bw()+theme(legend.position='none')
+
+data %>% ggplot(aes(temp_water,Shannon))+ geom_jitter()+
+  geom_smooth(method='lm')+
+  theme_bw()+theme(legend.position='none')
+
+data %>% ggplot(aes(tsi,Shannon))+ geom_jitter()+
+  geom_smooth(method='lm')+
+  theme_bw()+theme(legend.position='none')
 
 ###DONE###
