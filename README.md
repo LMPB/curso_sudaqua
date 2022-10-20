@@ -1,7 +1,7 @@
 Curso Análise de Microbiomas
 ============
 
-Bem-vindo ao repositório do curso de Análises de Microbioma realizado entre 17/10 e 21/10/2022 no Departamento de Hidrobiologia da Universidade Federal de São Carlos (UFSCar), São Carlos-SP, Brasil. Este curso é um seguimento do 3o Workshop da Rede em Ecologia Microbiana da América Latina - [MicroSudaqua] (https://microsudaqua.netlify.app/) e será ministrado por membros do Laboratório de Processos e Biodiversidade Microbiana - [LMPB] (http://www.lmpb.ufscar.br/). A partir daqui, iremos disponibilizar todos os dados e scripts do R que você precisa para realizar as análises de comunidades que serão abordadas no terceiro dia de aulas práticas.
+Bem-vindo ao repositório do curso de Análises de Microbioma realizado entre 17/10 e 21/10/2022 no Departamento de Hidrobiologia da Universidade Federal de São Carlos (UFSCar), São Carlos-SP, Brasil. Este curso é um seguimento do 3o Workshop da Rede em Ecologia Microbiana da América Latina - [MicroSudaqua](https://microsudaqua.netlify.app/) e será ministrado por membros do Laboratório de Processos e Biodiversidade Microbiana - [LMPB](http://www.lmpb.ufscar.br/). A partir daqui, iremos disponibilizar todos os dados e scripts do R que você precisa para realizar as análises de comunidades que serão abordadas no terceiro dia de aulas práticas.
 
 Responsáveis: Erick M. Barros e Pedro C. Junger
 
